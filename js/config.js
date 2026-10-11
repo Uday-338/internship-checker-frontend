@@ -3,7 +3,7 @@
  * Change API_BASE_URL if your Spring Boot server runs somewhere else.
  */
 const CONFIG = {
-  API_BASE_URL: "http://localhost:8080/api",
+  API_BASE_URL:"https://internship-eligibility-backend.onrender.com/api",
   REQUEST_TIMEOUT_MS: 15000,   // a request that takes longer than this shows an error instead of loading forever
 
   ENDPOINTS: {
