@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Applications - Internship Eligibility Checker</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-root="../../" data-role="admin" data-active="applications" data-title="Applications">
+  <div id="page">
+    <div class="page-head"><div><h1>Applications</h1><p>Review applications and update their status.</p></div></div>
+    <div class="toolbar"><input id="search" type="search" placeholder="Search student or company">
+      <select id="statusFilter"><option value="">All statuses</option></select></div>
+    <div id="table"><div class="spinner">Loading...</div></div>
+  </div>
+  <script src="../../js/config.js"></script>
+  <script src="../../js/services/apiClient.js"></script>
+  <script src="../../js/services/services.js"></script>
+  <script src="../../js/components/ui.js"></script>
+  <script src="../../js/components/layout.js"></script>
+  <script src="../../js/pages/admin-applications.js"></script>
+</body>
+</html>

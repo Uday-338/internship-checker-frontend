@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Students - Internship Eligibility Checker</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-root="../../" data-role="admin" data-active="students" data-title="Students">
+  <div id="page">
+    <div class="page-head"><div><h1>Students</h1><p>Registered student profiles.</p></div></div>
+    <div class="toolbar"><input id="search" type="search" placeholder="Search name, email or branch"></div>
+    <div id="table"><div class="spinner">Loading...</div></div>
+    <div class="modal" id="viewModal" role="dialog" aria-modal="true">
+      <div class="modal-box"><div class="modal-head"><h2>Student profile</h2><button class="x" id="closeModal" aria-label="Close">&times;</button></div>
+        <div id="profileBody"></div></div>
+    </div>
+  </div>
+  <script src="../../js/config.js"></script>
+  <script src="../../js/services/apiClient.js"></script>
+  <script src="../../js/services/services.js"></script>
+  <script src="../../js/components/ui.js"></script>
+  <script src="../../js/components/layout.js"></script>
+  <script src="../../js/pages/admin-students.js"></script>
+</body>
+</html>

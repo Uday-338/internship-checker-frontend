@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Internship Eligibility Checker</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../">
+  <div class="auth">
+    <section class="auth-side">
+      <h1>Know if you qualify before you apply.</h1>
+      <p>Check your CGPA, branch and skills against any internship and see exactly what to improve.</p>
+      <ul><li>✔ Instant eligibility check</li><li>✔ Skill match percentage</li><li>✔ Track every application</li></ul>
+    </section>
+    <section class="auth-main">
+      <div class="auth-card card">
+        <h1>Log in</h1>
+        <p class="muted small">Internship Eligibility Checker</p>
+        <div class="tabs" id="roleTabs">
+          <button type="button" class="on" data-role="STUDENT">Student</button>
+          <button type="button" data-role="ADMIN">Admin</button>
+        </div>
+        <div id="error" class="alert err hidden"></div>
+        <form id="loginForm">
+          <div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="username"></div>
+          <div class="field"><label for="password">Password</label><input id="password" type="password" required autocomplete="current-password"></div>
+          <button class="btn block" id="submitBtn">Log in</button>
+        </form>
+        <p class="small muted" id="regLink" style="margin-top:14px">New student? <a href="register.html">Create an account</a></p>
+      </div>
+    </section>
+  </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/services/apiClient.js"></script>
+  <script src="../js/services/services.js"></script>
+  <script src="../js/components/ui.js"></script>
+  <script src="../js/pages/login.js"></script>
+</body>
+</html>

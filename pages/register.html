@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration - Internship Eligibility Checker</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../">
+  <div class="auth">
+    <section class="auth-side">
+      <h1>Create your student account.</h1>
+      <p>Your branch, CGPA and skills are used to check which internships you are eligible for.</p>
+    </section>
+    <section class="auth-main">
+      <div class="auth-card card" style="max-width:520px">
+        <h1>Student registration</h1>
+        <div id="error" class="alert err hidden" style="margin-top:12px"></div>
+        <form id="regForm" style="margin-top:16px">
+          <div class="form-grid">
+            <div class="field full"><label for="name">Full name</label><input id="name" required></div>
+            <div class="field"><label for="email">Email</label><input id="email" type="email" required></div>
+            <div class="field"><label for="phone">Phone number</label><input id="phone" pattern="[0-9]{10}" title="10 digit number" required></div>
+            <div class="field"><label for="branch">Branch</label><select id="branch" required></select></div>
+            <div class="field"><label for="year">Year</label>
+              <select id="year" required><option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+            <div class="field"><label for="cgpa">CGPA</label><input id="cgpa" type="number" step="0.01" min="0" max="10" required></div>
+            <div class="field"><label for="password">Password</label><input id="password" type="password" minlength="6" required autocomplete="new-password"></div>
+            <div class="field full"><label for="confirm">Confirm password</label><input id="confirm" type="password" required autocomplete="new-password"></div>
+          </div>
+          <button class="btn block" id="submitBtn">Create account</button>
+        </form>
+        <p class="small muted" style="margin-top:14px">Already registered? <a href="login.html">Log in</a></p>
+      </div>
+    </section>
+  </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/services/apiClient.js"></script>
+  <script src="../js/services/services.js"></script>
+  <script src="../js/components/ui.js"></script>
+  <script src="../js/pages/register.js"></script>
+</body>
+</html>

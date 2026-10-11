@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage Internships - Internship Eligibility Checker</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-root="../../" data-role="admin" data-active="internships" data-title="Manage Internships">
+  <div id="page">
+    <div class="page-head"><div><h1>Internships</h1><p>Add, edit or remove internship openings.</p></div>
+      <button class="btn" id="addBtn">+ Add internship</button></div>
+    <div class="toolbar"><input id="search" type="search" placeholder="Search company or title"></div>
+    <div id="table"><div class="spinner">Loading...</div></div>
+
+    <div class="modal" id="formModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-box">
+        <div class="modal-head"><h2 id="modalTitle">Add internship</h2><button class="x" id="closeModal" aria-label="Close">&times;</button></div>
+        <form id="internForm">
+          <div class="form-grid">
+            <div class="field"><label for="company">Company</label><input id="company" required></div>
+            <div class="field"><label for="title">Internship title</label><input id="title" required></div>
+            <div class="field"><label for="location">Location</label><input id="location" required></div>
+            <div class="field"><label for="duration">Duration</label><input id="duration" placeholder="3 months" required></div>
+            <div class="field"><label for="stipend">Stipend (&#8377; per month)</label><input id="stipend" type="number" min="0" required></div>
+            <div class="field"><label for="minCgpa">Minimum CGPA</label><input id="minCgpa" type="number" step="0.01" min="0" max="10" required></div>
+            <div class="field full"><label for="eligibleBranches">Eligible branches</label><input id="eligibleBranches" placeholder="CSE, IT, ECE" required><span class="hint">Separate with commas.</span></div>
+            <div class="field full"><label for="requiredSkills">Required skills</label><input id="requiredSkills" placeholder="Java, SQL, Spring Boot" required><span class="hint">Separate with commas.</span></div>
+            <div class="field full"><label for="description">Description</label><textarea id="description" rows="3"></textarea></div>
+          </div>
+          <div class="actions"><button class="btn" id="saveBtn">Save internship</button><button type="button" class="btn outline" id="cancelBtn">Cancel</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/config.js"></script>
+  <script src="../../js/services/apiClient.js"></script>
+  <script src="../../js/services/services.js"></script>
+  <script src="../../js/components/ui.js"></script>
+  <script src="../../js/components/layout.js"></script>
+  <script src="../../js/pages/admin-internships.js"></script>
+</body>
+</html>

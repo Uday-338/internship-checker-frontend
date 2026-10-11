@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard - Internship Eligibility Checker</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-root="../../" data-role="admin" data-active="dashboard" data-title="Admin Dashboard">
+  <div id="page">
+    <div class="page-head"><div><h1>Admin dashboard</h1><p>Overview of internships, students and applications.</p></div>
+      <a class="btn" href="internships.html">Manage internships</a></div>
+    <div class="grid g4">
+      <div class="card stat"><div class="num" id="sInternships">-</div><div class="lbl">Internships</div></div>
+      <div class="card stat s2"><div class="num" id="sStudents">-</div><div class="lbl">Students</div></div>
+      <div class="card stat s3"><div class="num" id="sApps">-</div><div class="lbl">Applications</div></div>
+      <div class="card stat s4"><div class="num" id="sPending">-</div><div class="lbl">Awaiting review</div></div>
+    </div>
+    <h2 style="margin:26px 0 12px">Latest applications</h2>
+    <div id="recent"><div class="spinner">Loading...</div></div>
+  </div>
+  <script src="../../js/config.js"></script>
+  <script src="../../js/services/apiClient.js"></script>
+  <script src="../../js/services/services.js"></script>
+  <script src="../../js/components/ui.js"></script>
+  <script src="../../js/components/layout.js"></script>
+  <script src="../../js/pages/admin-dashboard.js"></script>
+</body>
+</html>
